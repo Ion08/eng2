@@ -1,0 +1,34 @@
+{
+  "name": "ielts-writing-training-simulator",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@codemirror/lang-markdown": "^6.3.4",
+    "@codemirror/lint": "^6.8.2",
+    "@uiw/react-codemirror": "^4.24.1",
+    "dictionary-en-us": "^3.0.0",
+    "natural": "^8.1.0",
+    "next": "^14.2.16",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "simple-spellchecker": "^1.2.8",
+    "write-good": "^1.0.8",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.11",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.16",
+    "typescript": "^5.5.4"
+  }
+}
