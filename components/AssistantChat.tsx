@@ -78,7 +78,7 @@ export function AssistantChat({ taskType, prompt, essay }: { taskType: TaskType;
 
       {error ? <div className="muted" style={{ color: 'var(--danger)', marginTop: 8 }}>{error}</div> : null}
       <div className="muted" style={{ marginTop: 10 }}>
-        Note: This assistant uses a local open-source model via Ollama, not a paid API.
+        Note: This assistant uses OpenRouter cloud AI. Configure OPENROUTER_API_KEY to enable.
       </div>
     </div>
   );

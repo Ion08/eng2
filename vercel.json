@@ -1,0 +1,11 @@
+{
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "regions": ["iad1"],
+  "env": {
+    "OPENROUTER_API_KEY": "@openrouter_api_key",
+    "OPENROUTER_MODEL": "@openrouter_model"
+  }
+}

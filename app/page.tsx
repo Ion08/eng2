@@ -55,7 +55,7 @@ export default function HomePage() {
     <>
       <div className="header">
         <h1 className="h1">IELTS Writing Training & Exam Simulation</h1>
-        <span className="badge">No paid APIs • Local-first</span>
+        <span className="badge">Cloud AI • OpenRouter</span>
       </div>
 
       <div className="grid">
@@ -134,7 +134,7 @@ export default function HomePage() {
       </div>
 
       <div style={{ marginTop: 14 }} className="muted">
-        The evaluation engine is deterministic and explainable. AI is used only for optional training tools (question generation, paraphrasing, assistant) via open-source local models.
+        The evaluation engine is deterministic and explainable. AI is used only for optional training tools (question generation, paraphrasing, assistant) via OpenRouter cloud service.
       </div>
     </>
   );

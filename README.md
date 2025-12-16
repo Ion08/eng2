@@ -1,22 +1,23 @@
 # IELTS Writing Training & Exam Simulation
 
-A local-first IELTS Writing practice + exam simulation web app.
+An IELTS Writing practice + exam simulation web app powered by cloud AI.
 
 ## Goals
 
 - Practice mode: live grammar/spelling feedback + educational assistant tools.
 - Test mode: timer + word count only (no hints), with an IELTS-like interface.
 - Evaluation: explainable, consistent scoring aligned to IELTS public descriptors.
-- **No paid APIs**. Optional local AI via open-source models.
+- Cloud AI via **OpenRouter** for intelligent features.
 
 ## Tech
 
 - Next.js (React) + TypeScript
 - Local analysis: rule-based scoring + open-source NLP utilities
-- Optional local LLM: **Ollama** (open-source models)
+- Cloud AI: **OpenRouter** (access to multiple AI models)
 - Optional advanced grammar: LanguageTool (self-host)
+- Vercel-ready deployment
 
-## Run
+## Run Locally
 
 ```bash
 npm install
@@ -25,24 +26,46 @@ npm run dev
 
 Open http://localhost:3000
 
-## Optional: Local LLM (question generation, paraphrasing, assistant)
+## Setup: OpenRouter Cloud AI (Required for AI features)
 
-Install Ollama and pull an open model (examples):
+This app uses [OpenRouter](https://openrouter.ai) to provide AI-powered features like:
+- Question generation
+- Intelligent paraphrasing
+- Writing assistant chat
+
+### Getting Started with OpenRouter
+
+1. Sign up at [https://openrouter.ai](https://openrouter.ai)
+2. Get your API key at [https://openrouter.ai/keys](https://openrouter.ai/keys)
+3. Create a `.env.local` file:
 
 ```bash
-ollama pull llama3.1:8b
-# or
-ollama pull mistral:7b
+OPENROUTER_API_KEY=your_api_key_here
+OPENROUTER_MODEL=meta-llama/llama-3.1-8b-instruct:free
 ```
 
-Create `.env.local`:
+### Model Options
 
-```bash
-OLLAMA_URL=http://localhost:11434
-OLLAMA_MODEL=llama3.1:8b
-```
+OpenRouter provides access to many models. Some options:
 
-If Ollama is not available, the app will still work for **manual questions** and deterministic evaluation, but AI tools will be disabled.
+- `meta-llama/llama-3.1-8b-instruct:free` (free tier, default)
+- `openai/gpt-3.5-turbo` (paid, faster)
+- `openai/gpt-4` (paid, best quality)
+- `anthropic/claude-3-sonnet` (paid, excellent for writing)
+
+See all models at: [https://openrouter.ai/models](https://openrouter.ai/models)
+
+**Note:** Without OpenRouter configured, the app will still work for manual questions and evaluation, but AI-powered features will be disabled.
+
+## Deploy to Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
+
+1. Click the button above or connect your repository to Vercel
+2. Add environment variables in Vercel dashboard:
+   - `OPENROUTER_API_KEY` (required)
+   - `OPENROUTER_MODEL` (optional)
+3. Deploy!
 
 ## Optional: LanguageTool server (better grammar detection)
 

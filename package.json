@@ -19,7 +19,7 @@
     "next": "^14.2.16",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "simple-spellchecker": "^1.2.8",
+    "simple-spellchecker": "^1.0.2",
     "write-good": "^1.0.8",
     "zod": "^3.23.8"
   },
