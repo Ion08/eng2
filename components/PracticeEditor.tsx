@@ -15,7 +15,7 @@ function matchesToDiagnostics(matches: GrammarMatch[], docLength: number): Diagn
       return {
         from,
         to,
-        severity: m.type === 'spelling' ? 'error' : 'warning',
+        severity: (m.type === 'spelling' ? 'error' : 'warning') as 'error' | 'warning',
         message:
           m.replacements && m.replacements.length
             ? `${m.message} Suggestions: ${m.replacements.slice(0, 3).join(', ')}`
